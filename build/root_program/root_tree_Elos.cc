@@ -39,7 +39,7 @@ void root_tree_Elos(TString root_file){
 
 	const Double_t XMIN   = 0.;
 	const Double_t XMAX   = 1.0e1;
-	const Double_t XWIDTH = 1.0e-1;
+	const Double_t XWIDTH = 1.0e-2;
 	Int_t bin = (Int_t)((XMAX - XMIN) / XWIDTH + 0.5);
 	TH1D *h1 = new TH1D("h1", "", bin, XMIN, XMAX);
 	//TH1D *h2 = new TH1D("h2", "", bin, XMIN, XMAX);
