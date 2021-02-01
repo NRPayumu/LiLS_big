@@ -34,7 +34,7 @@ void root_tree_Elos(TString root_file){
 	double EnergyLoss=0;
 	tr->SetBranchAddress("Eabs",&Eabs);
 	tr->SetBranchAddress("Elos",&Elos);
-	tr->SetBranchAddress("CapEn",&CapEn);
+	//tr->SetBranchAddress("CapEn",&CapEn);
 	const Int_t N = tr->GetEntries();
 
 	const Double_t XMIN   = 0.;
@@ -49,8 +49,8 @@ void root_tree_Elos(TString root_file){
 	for (Int_t ientry = 0; ientry < N; ientry++) {
 		tr->GetEntry(ientry);
 		//EnergyLoss=Elos;
-		EnergyLoss=CapEn;
-		CapEn *= 1.0e1;
+		//EnergyLoss=CapEn;
+		//CapEn *= 1.0e1;
 		//h1 -> Fill(EnergyLoss);
 		h1 -> Fill(Eabs);
 		//h2 -> Fill(CEabs);
